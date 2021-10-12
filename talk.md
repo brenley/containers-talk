@@ -1,39 +1,61 @@
 <!--
-header: "**bold** _test_"
-footer: title"
+header: Containers
 theme: gaia
-_class: invert
+class: invert
+style: |
+  img[alt~="center"] {
+    display: block;
+    margin: 0 auto;
+  }
 -->
----
 
 <!-- _class: lead -->
 # Containers
 
----
+### connecting the things
 
-# Virtualization
-
-
-
----
-
-# Why Containers
-
-- Portable
-- Predictable
-- Cheap
+<!-- _footer: https://github.com/MariaLetta/free-gophers-pac -->
+![w:200px](./gopher-network.svg)
 
 ---
 
-# Portability
+## Virtualization
 
-- (insert diagram of containers over VM)
-- OCI
+- Hardware abstraction
+- Efficiency => 💰
+- Tradeoff
+  > Nothing in free. Everything has to be paid for.
+  > -- Ted Hughes
+
+<!-- graph goes here showing down (complexity) and up (abstraction) -->
+![right]()
 
 ---
 
-# Predictability
+## Okay, so why Containers?
+
+| Portable, Predictable, Cheap
+
+![w:500 center](./containers-vs-vms-diagram.png)
+
+---
+
+## Portability
+
+- Open Container Initiative (OCI) 
+- Spec (Dockerfile) -> Image -> Container
+
+---
+
+## Predictability
 
 - Local "Works on my machine"
 - Deploying
-- 
+- Local -> Development -> QA -> Production
+
+---
+
+## In Practice
+
+- Setup: 5 golang microservices in an event streaming architecture (Kafka, Cassandra)
+- `
